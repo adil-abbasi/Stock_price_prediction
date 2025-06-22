@@ -10,7 +10,7 @@ from keras.layers import LSTM, Dense, Dropout, Bidirectional
 from keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 import tensorflow as tf
-
+ 
 # Theme Switcher
 st.set_page_config(page_title="Stock Forecast App", layout="wide")
 theme = st.sidebar.radio("Choose Theme:", options=["Light", "Dark"])
@@ -27,7 +27,7 @@ if theme == "Dark":
         </style>
     """, unsafe_allow_html=True)
 
-# Banner image
+# Banner image1
 st.image("Banner.png", use_column_width=True)
 
 # Sidebar inputs
