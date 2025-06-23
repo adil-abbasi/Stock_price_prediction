@@ -39,7 +39,8 @@ except:
     st.warning("Could not fetch real-time price.")
 
 # --- DISCLAIMER ---
-st.info("⚠️ **Disclaimer**: This prediction is based on historical price, technical indicators, and does not guarantee future performance. Use for educational purposes only.")
+st.warning("📌 **Note:** These predictions are based on past trends, technical indicators, and historical prices. They should not be used for financial decisions without professional advice.")
+
 
 # --- DATES ---
 end_date = datetime.datetime.now()
