@@ -7,3 +7,5 @@ numpy
 pandas
 matplotlib
 scikit-learn
+ta
+newsapi-python
