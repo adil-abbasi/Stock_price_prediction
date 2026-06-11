@@ -16,9 +16,23 @@ from ta.volatility import BollingerBands
 from newsapi import NewsApiClient
 
 # --- Streamlit Setup ---
-st.set_page_config(page_title="📈 Stock Forecast", layout="wide")
-st.image("Banner.png", use_column_width=True)
-st.title("📊 Stock Price Prediction & Forecasting with Technical Indicators")
+st.markdown(
+    """
+    <div style="
+        padding: 28px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #0f172a, #0e7490);
+        color: white;
+        margin-bottom: 25px;
+    ">
+        <h1 style="margin: 0;">Stock Price Prediction Dashboard</h1>
+        <p style="margin-top: 10px; font-size: 18px;">
+            Data analysis, trend visualization, and machine learning-based stock movement prediction.
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # --- Input ---
 ticker = st.text_input("🔎 Enter Stock Ticker:", "")
