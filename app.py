@@ -35,7 +35,35 @@ st.markdown(
 )
 
 # --- Input ---
-ticker = st.text_input("🔎 Enter Stock Ticker:", "")
+popular_tickers = {
+    "Apple (AAPL)": "AAPL",
+    "Microsoft (MSFT)": "MSFT",
+    "Google / Alphabet (GOOGL)": "GOOGL",
+    "Amazon (AMZN)": "AMZN",
+    "Tesla (TSLA)": "TSLA",
+    "Meta (META)": "META",
+    "Nvidia (NVDA)": "NVDA",
+    "Netflix (NFLX)": "NFLX",
+    "AMD (AMD)": "AMD",
+    "Intel (INTC)": "INTC",
+    "IBM (IBM)": "IBM",
+    "Coca-Cola (KO)": "KO",
+    "PepsiCo (PEP)": "PEP",
+    "JPMorgan Chase (JPM)": "JPM",
+    "Bank of America (BAC)": "BAC",
+    "Custom ticker": "CUSTOM",
+}
+
+selected_company = st.selectbox(
+    "🔎 Select Stock Ticker:",
+    options=list(popular_tickers.keys()),
+    index=0,
+)
+
+if popular_tickers[selected_company] == "CUSTOM":
+    ticker = st.text_input("Enter custom ticker symbol:", "AAPL").upper().strip()
+else:
+    ticker = popular_tickers[selected_company]
 if not ticker:
     st.warning("Please enter a valid stock ticker symbol to continue.")
     st.stop()
